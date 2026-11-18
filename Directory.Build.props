@@ -8,6 +8,8 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <Deterministic>true</Deterministic>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <!-- ملفّات packages.lock.json تُرفع، وCI يستعيد الحزم في وضع locked-mode. -->
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <!-- يسمح ببناء مشروع WPF على Linux (الترجمة فقط، لا التشغيل). -->
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <SatelliteResourceLanguages>ar;en</SatelliteResourceLanguages>

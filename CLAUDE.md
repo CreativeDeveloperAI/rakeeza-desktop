@@ -25,7 +25,11 @@ dotnet build Rakeeza.slnx
 dotnet test Rakeeza.slnx
 dotnet run --project src/Rakeeza.DevHost        # http://localhost:5239/health
 cd ui && npm ci && npm run build && npm test
+cd ui && npm run e2e -- --trace off              # Playwright بعد npm run build
 ```
+
+ملفّات `packages.lock.json` تُرفع، وCI يستعمل `dotnet restore --locked-mode`. بعد تغيير أيّ حزمة شغّل `dotnet restore` وارفع ملفّات القفل.
+يعمل CI (`.github/workflows/ci.yml`) على Linux وعلى `windows-latest`.
 
 مشروع `Rakeeza.Desktop` **يُترجَم** على Linux (بفضل `EnableWindowsTargeting`) لكنّه لا يعمل إلّا على Windows.
 

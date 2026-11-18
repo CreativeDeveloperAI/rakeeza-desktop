@@ -24,7 +24,7 @@
 
 | # | الـPR | المحتوى | معيار القبول |
 |---|---|---|---|
-| 0.1 | الهيكل | ملفّ الحلّ `Rakeeza.sln` ومشاريع Core وData وCommands وDevHost وDesktop وTests، ومجلّد `ui/` (Vite وReact 19 وTS)، و`Directory.Build.props`، و`.editorconfig`، و`CLAUDE.md`، و`docs/decisions/` (ADR-0001 للمعمارية، وADR-0002 للجسر، وADR-0003 للتوافق مع المخطّط) | `dotnet build` و`npm run build` ينجحان على Linux |
+| 0.1 | الهيكل | ملفّ الحلّ `Rakeeza.slnx` ومشاريع Core وData وCommands وDevHost وDesktop وTests، ومجلّد `ui/` (Vite وReact 19 وTS)، و`Directory.Build.props`، و`.editorconfig`، و`CLAUDE.md`، و`docs/decisions/` (ADR-0001 للمعمارية، وADR-0002 للجسر، وADR-0003 للتوافق مع المخطّط) | `dotnet build` و`npm run build` ينجحان على Linux |
 | 0.2 | CI | GitHub Actions: على Linux (بناء واختبارات .NET وVitest وPlaywright ضدّ DevHost)، وعلى `windows-latest` (بناء Desktop واختبارات .NET) | الخطّان أخضران |
 | 0.3 | الجسر والأنواع | `ICommand<TReq,TRes>` والسجلّ والموزّع، وطرف `/invoke` في DevHost، ومولّد أنواع TS، و`invoke` في الواجهة، وأمر تجريبي `system.ping` | اختبار من الطرف إلى الطرف عبر Playwright |
 | 0.4 | التشفير | `Rakeeza.Core.Crypto`: قراءة `rakeeza.key` وكتابته (ذرّيًا عبر `.new` ثمّ إعادة التسمية)، وفكّ المفتاح الرئيسي، واشتقاق مفتاح الوسائط، وقراءة RKZF وكتابتها على أجزاء (streaming) | اختبارات على fixtures حقيقية، وذهاب وإياب، ورفض ملفّ تالف أو كلمة مرور خاطئة |

@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.sln text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.ico binary
+*.sqlite binary
+*.db binary
+*.rkzf binary
+docs/legacy/fixtures/** binary

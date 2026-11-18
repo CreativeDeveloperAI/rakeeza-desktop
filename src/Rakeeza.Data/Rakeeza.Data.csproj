@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- الوصول إلى قاعدة SQLite القديمة (Dapper وSQL صريح)، وثوابت التوافق مع Laravel. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rakeeza.Core\Rakeeza.Core.csproj" />
+  </ItemGroup>
+</Project>

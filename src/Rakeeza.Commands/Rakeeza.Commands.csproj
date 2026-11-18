@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- أوامر الجسر <TReq,TRes>: الطبقة الوحيدة التي تراها الواجهة. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rakeeza.Core\Rakeeza.Core.csproj" />
+    <ProjectReference Include="..\Rakeeza.Data\Rakeeza.Data.csproj" />
+  </ItemGroup>
+</Project>

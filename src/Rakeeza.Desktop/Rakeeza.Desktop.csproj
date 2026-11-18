@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- مضيف Windows رقيق: WPF وWebView2 وتطبيق الخدمات الخاصّة بـWindows خلف واجهاتها. لا منطق أعمال هنا. -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyTitle>ركيزة</AssemblyTitle>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rakeeza.Commands\Rakeeza.Commands.csproj" />
+  </ItemGroup>
+</Project>

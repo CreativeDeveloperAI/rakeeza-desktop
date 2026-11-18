@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Rakeeza.Commands/Rakeeza.Commands.csproj" />
+    <Project Path="src/Rakeeza.Core/Rakeeza.Core.csproj" />
+    <Project Path="src/Rakeeza.Data/Rakeeza.Data.csproj" />
+    <Project Path="src/Rakeeza.Desktop/Rakeeza.Desktop.csproj" />
+    <Project Path="src/Rakeeza.DevHost/Rakeeza.DevHost.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Rakeeza.Architecture.Tests/Rakeeza.Architecture.Tests.csproj" />
+  </Folder>
+</Solution>

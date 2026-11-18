@@ -9,6 +9,10 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true,
+    // في التطوير تُمرَّر أوامر الجسر إلى DevHost (dotnet run --project src/Rakeeza.DevHost).
+    proxy: {
+      '/invoke': 'http://localhost:5239',
+    },
   },
   build: {
     outDir: 'dist',

@@ -13,6 +13,7 @@
 | `src/Rakeeza.DevHost` | ASP.NET Minimal API للتطوير وPlaywright فقط، ولا يُشحن | net10.0 |
 | `src/Rakeeza.Desktop` | مضيف WPF وWebView2 رقيق، وتطبيق خدمات Windows خلف واجهاتها | net10.0-windows |
 | `ui/` | React 19 وTypeScript وVite، وواجهة RTL عربية | — |
+| `tools/Rakeeza.TypeGen` | يولّد أنواع TypeScript للجسر من سجلّات C# | net10.0 |
 | `tests/` | اختبارات xUnit (ومنها اختبار حدود الطبقات) | net10.0 |
 
 اتّجاه الاعتماد: `Core ← Data ← Commands ← (DevHost | Desktop)`. يفرضه
@@ -25,8 +26,15 @@ dotnet build Rakeeza.slnx
 dotnet test Rakeeza.slnx
 dotnet run --project src/Rakeeza.DevHost        # http://localhost:5239/health
 cd ui && npm ci && npm run build && npm test
-cd ui && npm run e2e -- --trace off              # Playwright بعد npm run build
+cd ui && npm run e2e -- --trace off              # Playwright بعد npm run build (يشغّل DevHost بنفسه)
+dotnet run --project tools/Rakeeza.TypeGen       # يعيد توليد ui/src/bridge/generated.ts
 ```
+
+## الجسر
+
+- أمر جديد: سجلّان (طلب وردّ) ومعالج `[Command("group.action")]` يطبّق `ICommand<TReq,TRes>` في `Rakeeza.Commands`، ثمّ أعد توليد الأنواع وارفع `generated.ts`.
+- الواجهة تستدعي `invoke('group.action', payload)` من `ui/src/bridge`، ولا تعرف شيئًا عن المضيف.
+- أخطاء المجال تُرمى `CommandException(code)`، ونصّها العربي في `ui/src/strings.ts`.
 
 ملفّات `packages.lock.json` تُرفع، وCI يستعمل `dotnet restore --locked-mode`. بعد تغيير أيّ حزمة شغّل `dotnet restore` وارفع ملفّات القفل.
 يعمل CI (`.github/workflows/ci.yml`) على Linux وعلى `windows-latest`.

@@ -9,4 +9,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Rakeeza.Commands\Rakeeza.Commands.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+    <PackageReference Include="Microsoft.Web.WebView2" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- الواجهة المبنيّة (npm run build) تُنسخ إلى ui/ بجوار الملفّ التنفيذي إن وُجدت. -->
+    <Content Include="..\..\ui\dist\**" LinkBase="ui" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

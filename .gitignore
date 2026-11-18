@@ -1,0 +1,30 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+*.trx
+
+# Node / UI
+node_modules/
+ui/dist/
+ui/coverage/
+ui/test-results/
+ui/playwright-report/
+
+# Editors / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# بيانات حقيقية لا تُرفع أبدًا
+*.sqlite
+*.db
+*.db-wal
+*.db-shm
+rakeeza.key
+!docs/legacy/fixtures/**

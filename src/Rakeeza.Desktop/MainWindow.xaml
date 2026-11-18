@@ -1,11 +1,12 @@
 <Window x:Class="Rakeeza.Desktop.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         Title="ركيزة"
         FlowDirection="RightToLeft"
         Language="ar"
         Height="720" Width="1200"
         WindowStartupLocation="CenterScreen">
-  <!-- مكان WebView2؛ يُضاف عند ربط الجسر. -->
-  <Grid />
+  <!-- WebView2 يرسم الواجهة بنفسه (RTL من html dir)، فلا نعكس اتّجاهه مرّة ثانية. -->
+  <wv2:WebView2 x:Name="WebView" FlowDirection="LeftToRight" />
 </Window>

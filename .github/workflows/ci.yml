@@ -97,6 +97,17 @@ jobs:
           cache: npm
           cache-dependency-path: ui/package-lock.json
 
+      # Playwright يشغّل DevHost عبر dotnet run، فالاختبارات تمرّ بالجسر الحقيقي.
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+
+      - name: Restore .NET
+        working-directory: .
+        run: dotnet restore Rakeeza.slnx --locked-mode
+
       - run: npm ci --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
       - run: npm run build

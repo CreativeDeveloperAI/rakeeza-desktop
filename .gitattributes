@@ -10,3 +10,4 @@
 *.db binary
 *.rkzf binary
 docs/legacy/fixtures/** binary
+tests/*/Fixtures/** binary

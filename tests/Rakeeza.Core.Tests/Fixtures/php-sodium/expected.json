@@ -1,0 +1,26 @@
+{
+    "generator": "php 8.3.6, libsodium 1.0.18",
+    "passphrase": "ركيزة-تجريبية-2026",
+    "masterKeyHex": "48fb2ce73a0adc3a9f8a4c60c763fca7d7b561497a96d1139c08116e94669dcb",
+    "mediaKeyHex": "26ee3b8efa6d28290c6abf6fd711289ae5f385f1e9f62f9dbad93d6c0a6e4251",
+    "files": [
+        {
+            "name": "single.rkzf",
+            "chunkSize": 1048576,
+            "plainLength": 1000,
+            "plainSha256": "5097e7d587352f5097062ae679f37bda5802d9f875aba14c8cb4d1a188ada179"
+        },
+        {
+            "name": "chunked.rkzf",
+            "chunkSize": 64,
+            "plainLength": 200,
+            "plainSha256": "44cae5223d431caed4a9e32271d6abf17c3f2f4abac45fcdb48a99fcc6072a09"
+        },
+        {
+            "name": "exact.rkzf",
+            "chunkSize": 64,
+            "plainLength": 128,
+            "plainSha256": "cc548ca2dec1f6fe4f58b2e27aa9c7521607df1130d140b55a4dad0665302356"
+        }
+    ]
+}

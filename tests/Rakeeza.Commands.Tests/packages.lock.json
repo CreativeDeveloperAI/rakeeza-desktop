@@ -118,7 +118,10 @@
         }
       },
       "rakeeza.core": {
-        "type": "Project"
+        "type": "Project",
+        "dependencies": {
+          "libsodium": "[1.0.22, )"
+        }
       },
       "rakeeza.data": {
         "type": "Project",
@@ -131,6 +134,12 @@
         "dependencies": {
           "Rakeeza.Commands": "[1.0.0, )"
         }
+      },
+      "libsodium": {
+        "type": "CentralTransitive",
+        "requested": "[1.0.22, )",
+        "resolved": "1.0.22",
+        "contentHash": "KPD9SloJFclrsjnhABu7dzWrcyYkwPbvx5l1gRSPAX/0n+OBtSiVCKtGFv4n+ecWUHU0tCG9LSSwoZZx673zBQ=="
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions": {
         "type": "CentralTransitive",

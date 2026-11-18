@@ -1,5 +1,7 @@
 <Project>
   <ItemGroup Label="Runtime">
+    <!-- المكتبة الأصلية الرسمية لـlibsodium (نفس ما يستعمله امتداد sodium في PHP). -->
+    <PackageVersion Include="libsodium" Version="1.0.22" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.14" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.14" />
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="10.0.14" />

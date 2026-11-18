@@ -28,3 +28,5 @@ Thumbs.db
 *.db-shm
 rakeeza.key
 !docs/legacy/fixtures/**
+# متّجهات اختبار مولَّدة ببيانات تجريبية (ليست بيانات حقيقية)
+!tests/*/Fixtures/**

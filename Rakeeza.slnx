@@ -9,6 +9,7 @@
   <Folder Name="/tests/">
     <Project Path="tests/Rakeeza.Architecture.Tests/Rakeeza.Architecture.Tests.csproj" />
     <Project Path="tests/Rakeeza.Commands.Tests/Rakeeza.Commands.Tests.csproj" />
+    <Project Path="tests/Rakeeza.Core.Tests/Rakeeza.Core.Tests.csproj" />
   </Folder>
   <Folder Name="/tools/">
     <Project Path="tools/Rakeeza.TypeGen/Rakeeza.TypeGen.csproj" />
